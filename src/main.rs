@@ -1,5 +1,5 @@
 use clap::{Parser, ValueEnum};
-use wake_up_neo::{MatrixEasterEgg, Color};
+use wake_up_neo::{Color, MatrixEasterEgg};
 
 #[derive(Parser)]
 #[command(about, author, version)]
@@ -19,6 +19,10 @@ struct Cli {
     /// background color
     #[arg(short, long)]
     bg_color: Option<TerminalColor>,
+
+    /// Ignore Ctrl-C (SIGINT)
+    #[arg(short, long)]
+    ignore_ctrlc: bool,
 }
 
 #[derive(Copy, Clone, Debug, PartialEq, Eq, ValueEnum)]
@@ -52,6 +56,9 @@ impl From<TerminalColor> for Color {
 
 fn main() {
     let args = Cli::parse();
+    if args.ignore_ctrlc {
+        ctrlc::set_handler(|| {}).expect("Error setting Ctrl-C handler");
+    }
     let mut neo = MatrixEasterEgg::default();
     if let Some(ref name) = args.name {
         neo.set_name(name.clone());
