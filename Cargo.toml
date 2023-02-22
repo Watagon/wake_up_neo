@@ -6,7 +6,7 @@ edition = "2021"
 description = "Simulates the hacked terminal from \"The Matrix\""
 repository = "https://github.com/Watagon/wake_up_neo"
 license = "MIT OR Apache-2.0"
-keywords = ["matrix", "Wake up, Neo"]
+keywords = ["matrix", "Wake-up-Neo"]
 categories = ["command-line-utilities"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
