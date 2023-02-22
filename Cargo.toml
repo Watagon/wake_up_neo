@@ -1,7 +1,7 @@
 [package]
 name = "wake_up_neo"
 version = "1.0.0"
-authors = ["watagon <coding.watahiki@gmail.com>"]
+authors = ["Watagon <coding.watahiki@gmail.com>"]
 edition = "2021"
 description = "Simulates the hacked terminal from \"The Matrix\""
 repository = "https://github.com/Watagon/wake_up_neo.git"
