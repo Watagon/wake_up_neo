@@ -9,7 +9,7 @@ struct Cli {
     name: Option<String>,
 
     /// message to print to console
-    #[arg(short, long)]
+    #[arg(short, long, num_args = 1..)]
     message: Option<Vec<String>>,
 
     /// character color
