@@ -66,5 +66,11 @@ fn main() {
     if let Some(ref message) = args.message {
         neo.set_sentences(message.clone());
     }
+    if let Some(color) =  args.color {
+        neo.foreground(color.into());
+    }
+    if let Some(color) =  args.bg_color {
+        neo.background(color.into());
+    }
     neo.draw().unwrap();
 }
