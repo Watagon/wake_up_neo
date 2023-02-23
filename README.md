@@ -6,17 +6,17 @@
 
 Simulates the hacked terminal from "The Matrix"
 
-## demo
+## Demo
 
 ![demo](docs/demo.gif)
 
-## installation
+## Installation
 
 ```
 cargo install wake_up_neo
 ```
 
-## usage
+## Usage
 
 ```
 Simulates the hacked terminal from "The Matrix"
