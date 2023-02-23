@@ -5,7 +5,7 @@ authors = ["Watagon <coding.watahiki@gmail.com>"]
 edition = "2021"
 description = "Simulates the hacked terminal from \"The Matrix\""
 repository = "https://github.com/Watagon/wake_up_neo"
-license = "MIT OR Apache-2.0"
+license = "MIT"
 keywords = ["matrix", "Wake-up-Neo"]
 categories = ["command-line-utilities"]
 
