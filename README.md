@@ -10,6 +10,12 @@ Simulates the hacked terminal from "The Matrix"
 
 ![demo](docs/demo.gif)
 
+## installation
+
+```
+cargo install wake_up_neo
+```
+
 ## usage
 
 ```
