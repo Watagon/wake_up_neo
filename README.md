@@ -1,5 +1,9 @@
 # wake-up-neo
 
+[![Crates.io](https://img.shields.io/crates/v/wake_up_neo)](https://crates.io/crates/wake_up_neo)
+![GitHub last commit](https://img.shields.io/github/last-commit/watagon/wake_up_neo)
+![GitHub](https://img.shields.io/github/license/watagon/wake_up_neo)
+
 Simulates the hacked terminal from "The Matrix"
 
 ## demo
