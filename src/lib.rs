@@ -30,7 +30,7 @@ impl Default for MatrixEasterEgg {
             sentences: DEFAULT.into_iter().map(|a| a.to_owned()).collect(),
             name: "Neo".to_owned(),
             style: Style::new().green(),
-            delay: (300, 600),
+            delay: (200, 325),
         }
     }
 }
@@ -119,7 +119,7 @@ impl MatrixEasterEgg {
                 // }
                 write!(&mut term, "{}", self.style.apply_to(c))?;
             }
-            Self::sleep_range_millis(&mut rng, a.clone(), 4);
+            Self::sleep_range_millis(&mut rng, a.clone(), 6);
             term.clear_line()?;
         }
         Ok(())
