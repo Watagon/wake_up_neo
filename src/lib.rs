@@ -107,7 +107,7 @@ impl MatrixEasterEgg {
 
     pub fn draw(&self) -> std::io::Result<()> {
         let mut rng = rand::thread_rng();
-        let a = self.delay.0..self.delay.1;
+        let a = self.delay.0..=self.delay.1;
         let mut term = Term::stdout();
         term.clear_screen()?;
         Self::sleep_range_millis(&mut rng, a.clone(), 1);
