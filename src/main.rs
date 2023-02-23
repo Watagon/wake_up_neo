@@ -23,6 +23,13 @@ struct Cli {
     /// Ignore Ctrl-C (SIGINT)
     #[arg(short, long)]
     ignore_ctrlc: bool,
+
+    /// display delay in milliseconds
+    #[arg(
+        short, long,
+        num_args = 2,
+        value_names = ["MIN", "MAX"])]
+    delay: Option<Vec<u32>>,
 }
 
 #[derive(Copy, Clone, Debug, PartialEq, Eq, ValueEnum)]
@@ -66,11 +73,18 @@ fn main() {
     if let Some(ref message) = args.message {
         neo.set_sentences(message.clone());
     }
-    if let Some(color) =  args.color {
+    if let Some(color) = args.color {
         neo.foreground(color.into());
     }
-    if let Some(color) =  args.bg_color {
+    if let Some(color) = args.bg_color {
         neo.background(color.into());
+    }
+    if let Some(ref delay) = args.delay {
+        let (mut min, mut max) = (delay[0], delay[1]);
+        if max < min {
+            std::mem::swap(&mut min, &mut max);
+        }
+        neo.set_delay((min, max));
     }
     neo.draw().unwrap();
 }

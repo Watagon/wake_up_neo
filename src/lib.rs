@@ -101,6 +101,10 @@ impl MatrixEasterEgg {
         self.style = self.style.clone().bg(color);
     }
 
+    pub fn set_delay(&mut self, delay: (u32, u32)) {
+        self.delay = delay;
+    }
+
     pub fn draw(&self) -> std::io::Result<()> {
         let mut rng = rand::thread_rng();
         let a = self.delay.0..self.delay.1;
